@@ -52,7 +52,7 @@ Real code that uses this pattern. Each link was opened and checked.
 ## Exercises
 
 Solutions live in [`solution/`](solution/README.md). Build them with
-`colcon build --cmake-args -DTUT_BUILD_SOLUTIONS=ON`.
+`--cmake-args -DTUT_BUILD_SOLUTIONS=ON --no-warn-unused-cli`.
 
 1. ...
 2. ...

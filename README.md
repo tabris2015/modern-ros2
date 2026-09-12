@@ -37,7 +37,7 @@ robot; the plant is an integrator node, no simulator required.
 
 | # | Package | Covers | Status |
 |---|---|---|---|
-| 01 | `tut01_nodes` | Nodes, topics, timers, the three package layouts | in progress |
+| 01 | [`tut01_nodes`](src/tut01_nodes/README.md) | Nodes, topics, timers, the three package layouts | done |
 | 02 | `tut02_interfaces` | msg/srv/action, rosidl, service client and server | planned |
 | 03 | `tut03_launch_basics` | LaunchDescription, Node, param files | planned |
 | 04 | `tut04_params` | Descriptors, ranges, set-callbacks, YAML. Plant node, teleop, PlotJuggler | planned |
@@ -83,7 +83,7 @@ The package README is the lesson, and every one has the same sections:
 - CLI cheat sheet
 - In the wild: real repositories using the pattern, each link checked
 - Exercises, with solutions in `solution/` that build only with
-  `--cmake-args -DTUT_BUILD_SOLUTIONS=ON`
+  `--cmake-args -DTUT_BUILD_SOLUTIONS=ON --no-warn-unused-cli`
 
 Explanations of the C++ language itself stay out of the lesson READMEs and live
 in [docs/cpp-notes.md](docs/cpp-notes.md), one section per lesson.
@@ -122,8 +122,9 @@ Two hooks: one blocks `rm -rf` on `build/`, `install/`, `log/`; one runs
 - Docker Desktop on macOS has no real host networking, so DDS discovery between
   host and container does not work there. Everything inside one container still
   does.
-- The `hello_world*` packages are the Humble-era template this repository grew
-  from. Lesson 1 replaces them.
+- This repository grew from a Humble-era template with three `hello_world*`
+  packages. Lesson 1 replaced them; `git log -- src/hello_world_combined` shows
+  the ancestor.
 
 ## License
 

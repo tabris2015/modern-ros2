@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+# Copyright 2026 Jose Laruta
+"""ros2 run entry point for the Python listener."""
+
+from tut01_nodes.listener import main
+
+if __name__ == '__main__':
+    main()

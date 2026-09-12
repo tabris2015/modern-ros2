@@ -24,9 +24,11 @@ Create a complete ROS 2 package under `src/` with the correct structure, build f
 
 Read these existing packages to match this workspace's conventions exactly:
 
-- **Python**: `src/hello_world/` — `setup.py`, `setup.cfg`, `package.xml`, `hello_world/hello_node.py`
-- **C++**: `src/hello_world_cpp/` — `CMakeLists.txt`, `package.xml`, `src/hello_node.cpp`
-- **Combined**: `src/hello_world_combined/` — `CMakeLists.txt`, `package.xml`, Python module + C++ source + scripts
+- **Python**: `src/tut01_nodes_py/`: `setup.py`, `setup.cfg`, `package.xml`, `tut01_nodes_py/talker.py`
+- **C++**: `src/tut01_nodes_cpp/`: `CMakeLists.txt`, `package.xml`, `src/talker.cpp`
+- **Combined**: `src/tut01_nodes/`: `CMakeLists.txt`, `package.xml`, Python module, C++ sources, `scripts/`
+
+For a lesson package, use `/lesson` instead; it adds the README skeleton and the `solution/` layout.
 
 ## Package structures
 

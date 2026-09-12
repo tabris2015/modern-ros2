@@ -32,7 +32,7 @@ jobs:
         run: |
           source /opt/ros/jazzy/setup.bash
           colcon build --event-handlers console_cohesion+ \
-            --cmake-args -DTUT_BUILD_SOLUTIONS=ON
+            --cmake-args -DTUT_BUILD_SOLUTIONS=ON --no-warn-unused-cli
 
       - name: Test
         run: |

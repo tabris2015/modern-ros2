@@ -35,8 +35,9 @@ Build one or more packages in this workspace with colcon.
    # Release
    colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 
-   # With exercise solutions
-   colcon build --symlink-install --cmake-args -DTUT_BUILD_SOLUTIONS=ON
+   # With exercise solutions (--no-warn-unused-cli silences CMake in packages
+   # that have no solutions and therefore never read the variable)
+   colcon build --symlink-install --cmake-args -DTUT_BUILD_SOLUTIONS=ON --no-warn-unused-cli
    ```
 
 3. Source the overlay after a successful build:

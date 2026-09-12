@@ -29,7 +29,7 @@ No `pip install` for ROS dependencies; declare them in `package.xml` and let
 ```bash
 colcon build --symlink-install                                 # Debug + compile_commands.json (colcon_defaults.yaml)
 colcon build --symlink-install --packages-select tut01_nodes
-colcon build --symlink-install --cmake-args -DTUT_BUILD_SOLUTIONS=ON   # exercise solutions too
+colcon build --symlink-install --cmake-args -DTUT_BUILD_SOLUTIONS=ON --no-warn-unused-cli   # exercise solutions too
 source install/setup.bash
 colcon test --return-code-on-test-failure && colcon test-result --verbose
 ros2 run <pkg> <node>_py                                       # or <node>_cpp
@@ -119,5 +119,6 @@ red build.
 
 ## Journal
 
-`docs/journal.md`, dated entries, newest first. The user writes what confused
-them per lesson. Claude adds setup gotchas that cost real time.
+`docs/journal.md` is the user's voice only: dated entries, newest first, about
+what confused them per lesson. Claude does not write entries there;
+implementation notes go in commit messages.

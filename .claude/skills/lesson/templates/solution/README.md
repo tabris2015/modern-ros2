@@ -7,7 +7,8 @@ Layout mirrors the package: C++ in `src/`, Python in `PACKAGE_NAME_solution/`
 linted with the lesson; it is only built when you ask:
 
 ```bash
-colcon build --symlink-install --packages-select PACKAGE_NAME --cmake-args -DTUT_BUILD_SOLUTIONS=ON
+colcon build --symlink-install --packages-select PACKAGE_NAME \
+  --cmake-args -DTUT_BUILD_SOLUTIONS=ON --no-warn-unused-cli
 ```
 
 ## Exercise 1

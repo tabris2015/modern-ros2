@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+# Copyright 2026 Jose Laruta
+"""ros2 run entry point for the Python relay solution."""
+
+from tut01_nodes_solution.relay import main
+
+if __name__ == '__main__':
+    main()
